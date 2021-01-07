@@ -30,6 +30,7 @@ CONTIGENCON=configins['ordercon']['contingencon']
 #stressconfig
 insertfreq = configins['stressconfig']['insertfreq']
 oneturnsleep = float(insertfreq)
+autoprocess = configins['stressconfig']['autoprocess']
 
 
 class CTradeApi(api.CThostFtdcTraderApi):

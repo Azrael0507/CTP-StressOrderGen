@@ -24,6 +24,7 @@ volumecon=3 #3为一种错误的报单类型，可用于保送到交易所后错
 contingencon=1 #不用修改
 [stressconfig]
 insertfreq=0.002 #报单间隔秒，一个周期内，所以investorlist文件中的客户，每人报单一次，报单间隔时间后，进入下一个循环
+autoprocess=0 #是否自动执行，回避所有步骤中的暂停，1为完全自动，用于远程部署；0为非自动，用于本地观察调试
 
 investorlist.txt：
 每行一个客户号，不支持注释功能，请特别注意

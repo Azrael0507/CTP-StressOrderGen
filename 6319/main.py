@@ -42,7 +42,11 @@ def main():
 				break
     
 	print("login end!")
-	input()
+
+	if(autoprocess == "1"):
+		print("auto next")
+	else:
+		input("press enter to continue")
 
 	print("start settle confirm")
 	for invid in sorted(invlist.keys()):
@@ -55,7 +59,11 @@ def main():
 				break
 	print("settle confirm end")
 
-	input()
+	if(autoprocess == "1"):
+		print("auto next")
+	else:
+		input("press enter to continue")
+
 	#print(invlist)
 	while(1):
 		for invid in sorted(invlist.keys()):
