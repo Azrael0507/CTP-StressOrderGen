@@ -43,3 +43,9 @@ investorlist.txt：
 第三步：
 进入无限制的报单循环，使用ctrl+c停止报单，或者寻到pid杀死进程
 (二进制版本执行方式：直接赋予执行权限，./执行；python版本执行方式：注意将当前目录加入LD_LIBRARY_PATH中，使用python3 main.py启动程序)
+
+
+tinit-scripts:
+用于修改CTP初始化csv文件的脚本工具，放置到tinit的trade用户下即可使用,两个脚本基于上期技术相关脚本基础上进行修改
+ChangeTradingAccount.sh：修改全客户可用资金，确保压测有充足资金支持
+ChangePW.sh：修改客户密码、最后密码修改时间、最后登录时间（密码修改为：1qa2ws3ed，也调整了最后密码修改时间与最后登录时间，防止出现首次登录密码需要修改的问题）
