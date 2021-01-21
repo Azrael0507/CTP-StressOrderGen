@@ -49,3 +49,12 @@ tinit-scripts:
 用于修改CTP初始化csv文件的脚本工具，放置到tinit的trade用户下即可使用,两个脚本基于上期技术相关脚本基础上进行修改
 ChangeTradingAccount.sh：修改全客户可用资金，确保压测有充足资金支持
 ChangePW.sh：修改客户密码、最后密码修改时间、最后登录时间（密码修改为：1qa2ws3ed，也调整了最后密码修改时间与最后登录时间，防止出现首次登录密码需要修改的问题）
+
+multitools:
+本脚本包实现多台部署、查看、启动以及暂停功能，以下为部署脚本包注意事项：
+1、建议机制放置在配置完毕的ctp config主机的trade用户目录下，方便通过信任关系直接访问其他机器
+2、调整menu.cfg，其中base_dir为脚本包自身所在目录，而directory_name为脚本包文件夹下，分发工具的文件夹名字，以实例代码为例，进行程序分发时，实际是将本地的 /home/trade/multitools/651-release/目录分发出去
+3、调整iplist，其中可以写config机器可以直接访问的机器名字，也可以配置可以直接访问的ip地址
+4、调整范例651-release目录下的config.ini文件与investorlist.txt文件，其中特别注意config.ini中的autoprocess需要配置为1，表示自动执行，不用人工干预
+5、本版本建议压测策略为，将config.ini中的前置地址配置为127.0.0.1的本地环回地址，工具分别分发到每台front机器上，可以实现对每台front机器自身的压力测试功能
+6、项目release界面提供单独版本测试工具下载，以及651版本的多台部署工具下载
